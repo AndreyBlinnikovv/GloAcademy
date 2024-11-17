@@ -1,15 +1,20 @@
-const title = 'Курс "JavaScript"';
-const screens = 'Простые, Сложные, Интерактивные';
-const screenPrice = 777;
-const rollback = 3;
-const fullPrice = 300000;
-const adaptive = true;
+let num = 266219;
 
-console.log(typeof title);
-console.log(typeof fullPrice);
-console.log(typeof adaptive);
-console.log(screens.length);
-console.log("Стоимость верстки экранов" + " " + screenPrice + " " + "долларов");
-console.log("Стоимость разработки сайта" + " " + fullPrice + " " + "рублей");
-console.log(screens.toLowerCase().split(", "));
-console.log(fullPrice * (rollback / 100));
+let numStr = num.toString();
+let result = 1;
+
+for (let i = 0; i < numStr.length; i++) {
+  result *= parseInt(numStr[i]);
+  }
+  result **= 3;  
+  console.log(result);
+  console.log(result.toString().substring(0, 2));
+  
+
+
+
+
+        
+
+
+
