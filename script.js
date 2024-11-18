@@ -1,47 +1,38 @@
 'use strict'
 
-const title = prompt("Как называется ваш проект?");
-console.log(title);
+let lang = 'ru';
 
-const screens = prompt("Какие типы экранов нужно разработать?");
-console.log(screens);
+//через if
+if (lang === 'ru') {
+  console.log('Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье');
+  } else if (lang === 'en') {
+  console.log('Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday');
+  }
 
-const screenPrice = prompt("Сколько будет стоить данная работа?");
-console.log(screenPrice);
-
-const adaptive = prompt("Нужен ли адаптив на сайте?");
-
-if (adaptive == "Да" || adaptive == "да") {
-  console.log(true);
-} else {
-  console.log(false);
-}
-
-const serviceQuestion1 = prompt("Какой дополнительный тип услуги нужен?");
-const servicePrice1 = +prompt("Сколько это будет стоить?")
-
-const serviceQuestion2 = prompt("Какой дополнительный тип услуги нужен?");
-const servicePrice2 = +prompt("Сколько это будет стоить?")
-
-const fullPrice = screenPrice + servicePrice1 + servicePrice2;
-
-const rollback = 3;
-const servicePercentPrice = fullPrice - fullPrice * (rollback / 100);
-console.log(Math.ceil(servicePercentPrice));
-
-switch(true) {
-  case fullPrice >= 30000:
-    console.log("Даем скидку в 10%");
+ //через switch-case
+ switch (lang) {
+  case 'ru':
+    console.log('Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье');
     break;
-  case fullPrice >= 15000 && fullPrice < 30000:
-    console.log("Даем скидку в 5%");
-    break;  
-  case fullPrice < 15000 && fullPrice >= 0:
-    console.log("Скидка не предусмотрена");
-    break; 
-  case fullPrice < 0:
-    console.log("Что то пошло не так");
-    break;     
-}
+  case 'en':
+    console.log('Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday');
+    break;
+  } 
+
+//без if и switch-case
+const daysOfWeeks = {
+  ru: ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+  en: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+  };  
+  console.log(daysOfWeeks[lang].join(', '));
+
+
+
+const namePerson = "Артем";
+
+const result = namePerson === "Артем" ? "директор" :
+               namePerson === "Александр" ? "преподаватель" : "студент";
+
+console.log(result); 
 
 
