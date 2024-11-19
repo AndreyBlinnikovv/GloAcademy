@@ -6,10 +6,10 @@ console.log(title);
 const screens = prompt("Какие типы экранов нужно разработать?");
 console.log(screens);
 
-const screenPrice = prompt("Сколько будет стоить данная работа?");
+const screenPrice = +prompt("Сколько будет стоить данная работа?");
 console.log(screenPrice);
 
-const adaptive = prompt("Нужен ли адаптив на сайте?");
+const adaptive = confirm("Нужен ли адаптив на сайте?");
 
 if (adaptive == "Да" || adaptive == "да") {
   console.log(true);
@@ -26,8 +26,8 @@ const servicePrice2 = +prompt("Сколько это будет стоить?")
 const fullPrice = screenPrice + servicePrice1 + servicePrice2;
 
 const rollback = 3;
-const servicePercentPrice = fullPrice - fullPrice * (rollback / 100);
-console.log(Math.ceil(servicePercentPrice));
+const servicePercentPrice = Math.ceil(fullPrice - fullPrice * (rollback / 100));
+console.log(servicePercentPrice);
 
 switch(true) {
   case fullPrice >= 30000:
