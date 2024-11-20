@@ -1,7 +1,6 @@
 'use strict'
 
 let lang = 'ru';
-let daysOfWeeks;
 
 //через if
 if (lang === 'ru') {
@@ -21,7 +20,7 @@ if (lang === 'ru') {
   } 
 
 //без if и switch-case
-daysOfWeeks = {
+let daysOfWeeks = {
   ru: ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
   en: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
   };  
