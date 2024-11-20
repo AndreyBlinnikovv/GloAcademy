@@ -11,12 +11,6 @@ console.log(screenPrice);
 
 const adaptive = confirm("Нужен ли адаптив на сайте?");
 
-if (adaptive == "Да" || adaptive == "да") {
-  console.log(true);
-} else {
-  console.log(false);
-}
-
 const serviceQuestion1 = prompt("Какой дополнительный тип услуги нужен?");
 const servicePrice1 = +prompt("Сколько это будет стоить?")
 
